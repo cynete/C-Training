@@ -1,0 +1,17 @@
+D:\JP\Learning\GitHub\C#\JsonLearning\JsonLearning\obj\Debug\net6.0\JsonLearning.GeneratedMSBuildEditorConfig.editorconfig
+D:\JP\Learning\GitHub\C#\JsonLearning\JsonLearning\obj\Debug\net6.0\JsonLearning.AssemblyInfoInputs.cache
+D:\JP\Learning\GitHub\C#\JsonLearning\JsonLearning\obj\Debug\net6.0\JsonLearning.AssemblyInfo.cs
+D:\JP\Learning\GitHub\C#\JsonLearning\JsonLearning\obj\Debug\net6.0\JsonLearning.csproj.CoreCompileInputs.cache
+D:\JP\Learning\GitHub\C#\JsonLearning\JsonLearning\bin\Debug\net6.0\JsonLearning.exe
+D:\JP\Learning\GitHub\C#\JsonLearning\JsonLearning\bin\Debug\net6.0\JsonLearning.deps.json
+D:\JP\Learning\GitHub\C#\JsonLearning\JsonLearning\bin\Debug\net6.0\JsonLearning.runtimeconfig.json
+D:\JP\Learning\GitHub\C#\JsonLearning\JsonLearning\bin\Debug\net6.0\JsonLearning.dll
+D:\JP\Learning\GitHub\C#\JsonLearning\JsonLearning\bin\Debug\net6.0\JsonLearning.pdb
+D:\JP\Learning\GitHub\C#\JsonLearning\JsonLearning\obj\Debug\net6.0\JsonLearning.dll
+D:\JP\Learning\GitHub\C#\JsonLearning\JsonLearning\obj\Debug\net6.0\refint\JsonLearning.dll
+D:\JP\Learning\GitHub\C#\JsonLearning\JsonLearning\obj\Debug\net6.0\JsonLearning.pdb
+D:\JP\Learning\GitHub\C#\JsonLearning\JsonLearning\obj\Debug\net6.0\JsonLearning.genruntimeconfig.cache
+D:\JP\Learning\GitHub\C#\JsonLearning\JsonLearning\obj\Debug\net6.0\ref\JsonLearning.dll
+D:\JP\Learning\GitHub\C#\JsonLearning\JsonLearning\bin\Debug\net6.0\Newtonsoft.Json.dll
+D:\JP\Learning\GitHub\C#\JsonLearning\JsonLearning\obj\Debug\net6.0\JsonLearning.csproj.AssemblyReference.cache
+D:\JP\Learning\GitHub\C#\JsonLearning\JsonLearning\obj\Debug\net6.0\JsonLearning.csproj.CopyComplete
