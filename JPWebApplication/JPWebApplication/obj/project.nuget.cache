@@ -1,0 +1,15 @@
+{
+  "version": 2,
+  "dgSpecHash": "Q2zQbnRz67nsk4htenXa3myMHRStfkhMVn/xTCRWSiY2ZDzLuAIkD0Sdo4iuYUHdsft+dJ6EYnqRD6OGQ/RZmg==",
+  "success": true,
+  "projectFilePath": "D:\\JP\\Learning\\GitHub\\C-Training\\JPWebApplication\\JPWebApplication\\JPWebApplication.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\frost\\.nuget\\packages\\microsoft.extensions.apidescription.server\\6.0.5\\microsoft.extensions.apidescription.server.6.0.5.nupkg.sha512",
+    "C:\\Users\\frost\\.nuget\\packages\\microsoft.openapi\\1.2.3\\microsoft.openapi.1.2.3.nupkg.sha512",
+    "C:\\Users\\frost\\.nuget\\packages\\swashbuckle.aspnetcore\\6.4.0\\swashbuckle.aspnetcore.6.4.0.nupkg.sha512",
+    "C:\\Users\\frost\\.nuget\\packages\\swashbuckle.aspnetcore.swagger\\6.4.0\\swashbuckle.aspnetcore.swagger.6.4.0.nupkg.sha512",
+    "C:\\Users\\frost\\.nuget\\packages\\swashbuckle.aspnetcore.swaggergen\\6.4.0\\swashbuckle.aspnetcore.swaggergen.6.4.0.nupkg.sha512",
+    "C:\\Users\\frost\\.nuget\\packages\\swashbuckle.aspnetcore.swaggerui\\6.4.0\\swashbuckle.aspnetcore.swaggerui.6.4.0.nupkg.sha512"
+  ],
+  "logs": []
+}
