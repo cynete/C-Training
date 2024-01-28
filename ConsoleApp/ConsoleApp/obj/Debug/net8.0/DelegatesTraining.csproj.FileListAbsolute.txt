@@ -1,0 +1,15 @@
+D:\JP\Learning\GitHub\C-Training\ConsoleApp\ConsoleApp\bin\Debug\net8.0\DelegatesTraining.exe
+D:\JP\Learning\GitHub\C-Training\ConsoleApp\ConsoleApp\bin\Debug\net8.0\DelegatesTraining.deps.json
+D:\JP\Learning\GitHub\C-Training\ConsoleApp\ConsoleApp\bin\Debug\net8.0\DelegatesTraining.runtimeconfig.json
+D:\JP\Learning\GitHub\C-Training\ConsoleApp\ConsoleApp\bin\Debug\net8.0\DelegatesTraining.dll
+D:\JP\Learning\GitHub\C-Training\ConsoleApp\ConsoleApp\bin\Debug\net8.0\DelegatesTraining.pdb
+D:\JP\Learning\GitHub\C-Training\ConsoleApp\ConsoleApp\obj\Debug\net8.0\DelegatesTraining.GeneratedMSBuildEditorConfig.editorconfig
+D:\JP\Learning\GitHub\C-Training\ConsoleApp\ConsoleApp\obj\Debug\net8.0\DelegatesTraining.AssemblyInfoInputs.cache
+D:\JP\Learning\GitHub\C-Training\ConsoleApp\ConsoleApp\obj\Debug\net8.0\DelegatesTraining.AssemblyInfo.cs
+D:\JP\Learning\GitHub\C-Training\ConsoleApp\ConsoleApp\obj\Debug\net8.0\DelegatesTraining.csproj.CoreCompileInputs.cache
+D:\JP\Learning\GitHub\C-Training\ConsoleApp\ConsoleApp\obj\Debug\net8.0\DelegatesTraining.sourcelink.json
+D:\JP\Learning\GitHub\C-Training\ConsoleApp\ConsoleApp\obj\Debug\net8.0\DelegatesTraining.dll
+D:\JP\Learning\GitHub\C-Training\ConsoleApp\ConsoleApp\obj\Debug\net8.0\refint\DelegatesTraining.dll
+D:\JP\Learning\GitHub\C-Training\ConsoleApp\ConsoleApp\obj\Debug\net8.0\DelegatesTraining.pdb
+D:\JP\Learning\GitHub\C-Training\ConsoleApp\ConsoleApp\obj\Debug\net8.0\DelegatesTraining.genruntimeconfig.cache
+D:\JP\Learning\GitHub\C-Training\ConsoleApp\ConsoleApp\obj\Debug\net8.0\ref\DelegatesTraining.dll

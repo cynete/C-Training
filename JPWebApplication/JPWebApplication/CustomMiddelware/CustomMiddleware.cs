@@ -1,5 +1,4 @@
-﻿
-namespace JPWebApplication
+﻿namespace JPWebApplication.CustomMiddelware
 {
     public class CustomMiddleware : IMiddleware
     {
