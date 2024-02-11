@@ -35,11 +35,14 @@ internal class Program
         app.UseDeveloperExceptionPage();
 
         app.Map("/errorX", CallErrorMiddleware);
-        //app.Map("/jptest", CustomMap);
+        app.Map("/jptest", CustomMap);
         //app.UseMiddleware<CustomMiddleware>();
         app.Use(async (context, next) =>
         {
             //await context.Response.WriteAsync("middeleware 1 \n");
+
+            if (context.Request.Path == "/Hello")
+                context.Request.Path = "/test/WeatherForecast/Get";
             string myString = "Hello, this is a string.";
             await next.Invoke();
         });
@@ -70,24 +73,19 @@ internal class Program
             app.Run(async context => { });
         }
 
-        //void CustomMap(IApplicationBuilder app)
-        //{
-        //    app.Use(async (context, next) =>
-        //    {
-        //        await context.Response.WriteAsync("jptest is not implemented");
-        //        await next();
-        //    });
-        //}
+        void CustomMap(IApplicationBuilder app)
+        {
+            app.Use(async (context, next) =>
+            {
+                await context.Response.WriteAsync("jptest is not implemented");
+                await next();
+            });
+        }
 
         app.UseRouting();
         app.MapControllers();
         app.MapDefaultControllerRoute();
-        //app.MapFallbackToController("GetMeValues", "Values");
         app.MapFallbackToController("GetError", "ErrorHandler");
-
-
-
-        //app.UseEndpoints(endpoints => endpoints.MapControllers());
         app.Run();
     }
 }

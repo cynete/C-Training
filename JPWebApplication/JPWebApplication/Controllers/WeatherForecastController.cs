@@ -3,7 +3,8 @@ using Microsoft.AspNetCore.Mvc;
 namespace JPWebApplication.Controllers
 {
     [ApiController]
-    [Route("test/[controller]/[action]")]
+    //[ApiExplorerSettings(IgnoreApi = true)]
+    [Route("api/[controller]/[action]")]
     public class WeatherForecastController : ControllerBase
     {
         private static readonly string[] Summaries = new[]
@@ -18,7 +19,11 @@ namespace JPWebApplication.Controllers
             _logger = logger;
         }
 
-        [HttpGet(Name = "GetWeatherForecast")]
+        [Route("test/GetWeatherForecast")]
+        //base route override
+        [Route("~/test/WeatherForecast/Get")]
+        [HttpGet]
+        //[HttpGet(Name = "GetWeatherForecast")]
         public IEnumerable<WeatherForecast> Get()
         {
             return Enumerable.Range(1, 5).Select(index => new WeatherForecast
@@ -30,7 +35,9 @@ namespace JPWebApplication.Controllers
             .ToArray();
         }
 
-        [HttpGet(Name = "GetWeatherForecast1")]
+        [Route("test/GetWeatherForecast2")]
+        [HttpGet]
+        //[HttpGet(Name = "GetWeatherForecast1")]
         public string Get1()
         {
             return "Hello world. Im from Get1";

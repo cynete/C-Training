@@ -27,6 +27,20 @@
             {
                 return $"from delegate param = {x}";
             },1,2);
+
+            Action<string> Act = test;
+            Act += test2;
+            Act("hello");
+        }
+
+        private static void test(string obj)
+        {
+            Console.WriteLine($"Action1 received = {obj}");
+        }
+
+        private static void test2(string obj)
+        {
+            Console.WriteLine($"Action2 received = {obj}");
         }
 
         private static void Calc(Func<int, int, int> testFunc, int a, int b)
