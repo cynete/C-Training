@@ -10,7 +10,7 @@ namespace JPWebApplication.Models
 
     public static class EmpHelper
     {
-        
+
         private static List<EmployeeModel> AllEmployees = new List<EmployeeModel>() {
                 new EmployeeModel() { id = 1, name = "Emp1"},
                 new EmployeeModel() { id = 2, name = "Emp2"},
@@ -21,6 +21,11 @@ namespace JPWebApplication.Models
         public static List<EmployeeModel> GetEmployeeList()
         {
             return AllEmployees;
+        }
+
+        public static void Add(EmployeeModel employee)
+        {
+            AllEmployees.Add(employee);
         }
     }
 }

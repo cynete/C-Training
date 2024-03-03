@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("JPWebApplication")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+816dca7b72a8e080d590d3f8ad267b7801b93fa6")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+37ae801a7b166d5d8a1d81a99a5f8f5d3d40deb8")]
 [assembly: System.Reflection.AssemblyProductAttribute("JPWebApplication")]
 [assembly: System.Reflection.AssemblyTitleAttribute("JPWebApplication")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
