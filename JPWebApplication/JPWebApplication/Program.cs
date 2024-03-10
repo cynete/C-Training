@@ -1,9 +1,5 @@
 using JPWebApplication.CustomMiddelware;
-using Microsoft.AspNetCore.Builder;
-using Microsoft.AspNetCore.Http;
-using Microsoft.VisualBasic;
-using System.Net;
-using System.Text;
+using JPWebApplication.Models;
 
 internal class Program
 {
@@ -19,6 +15,9 @@ internal class Program
         builder.Services.AddTransient<CustomMiddleware>();
         builder.Services.AddTransient<ErrorMessageMiddleware>();
         builder.Services.AddControllers();
+        //builder.Services.AddSingleton<IEmployeeModel, EmployeeModel>();
+        //builder.Services.AddScoped<IEmployeeModel, EmployeeModel>();
+        builder.Services.AddTransient<IEmployeeModel, EmployeeModel>();
 
         var app = builder.Build();
 

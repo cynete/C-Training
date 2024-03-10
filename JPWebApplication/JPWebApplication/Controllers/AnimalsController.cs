@@ -14,7 +14,7 @@ namespace JPWebApplication.Controllers
         public string name { get; set; }
 
         [HttpPost("add1")]
-        public IActionResult Add1(int id, string name)
+        public IActionResult Add1()
         {
             return Ok(new { id, name });
         }

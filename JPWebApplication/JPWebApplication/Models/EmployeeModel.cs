@@ -2,10 +2,33 @@
 
 namespace JPWebApplication.Models
 {
-    public class EmployeeModel
+    public class EmployeeModel : IEmployeeModel
     {
+        private List<IEmployeeModel> empList = new List<IEmployeeModel>();
         public int id { get; set; }
         public string name { get; set; }
+
+        public int Add(string Name)
+        {
+            var newId = empList.Count + 1;
+            empList.Add(new EmployeeModel()
+            {
+                id = newId,
+                name = Name
+            });
+
+            return newId;
+        }
+
+        public List<IEmployeeModel> GetAll()
+        {
+            return empList;
+        }
+
+        public IEmployeeModel Get(int id)
+        {
+            return empList.SingleOrDefault(x => x.id == id);
+        }
     }
 
     public static class EmpHelper
