@@ -5,7 +5,7 @@ using Microsoft.Extensions.Diagnostics.HealthChecks;
 
 namespace GrpcServer.Services
 {
-    public class GreeterService : Greeter.GreeterBase
+    public class GrpcService : GrpcTestService.GrpcTestServiceBase
     {
         private List<Employee> AllEmployees = new List<Employee>() {
         new Employee() { Id = 1,Name = "Emp1", Age=10,City="Loc1"},
@@ -16,8 +16,8 @@ namespace GrpcServer.Services
         new Employee() { Id = 6,Name = "Emp6", Age=60,City="Loc6"}
             };
 
-        private readonly ILogger<GreeterService> _logger;
-        public GreeterService(ILogger<GreeterService> logger)
+        private readonly ILogger<GrpcService> _logger;
+        public GrpcService(ILogger<GrpcService> logger)
         {
             _logger = logger;
         }

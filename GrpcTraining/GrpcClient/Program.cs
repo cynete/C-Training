@@ -13,7 +13,7 @@ namespace GrpcClient
 
             GrpcChannel channel = GrpcChannel.ForAddress("https://localhost:7052");
 
-            var client = new Greeter.GreeterClient(channel);
+            var client = new GrpcTestService.GrpcTestServiceClient(channel);
 
             HelloRequest request = new HelloRequest() { Name = "JP" };
             HelloReply response = client.SayHello(request);
@@ -61,10 +61,10 @@ namespace GrpcClient
 
                 GrpcChannel channel = GrpcChannel.ForAddress("https://localhost:7052");
 
-                var client = new Greeter.GreeterClient(channel);
+                var client = new GrpcTestService.GrpcTestServiceClient(channel);
 
                 Console.WriteLine("Stream Started.");
-                var cancellationToken = new CancellationTokenSource(TimeSpan.FromSeconds(10));
+                var cancellationToken = new CancellationTokenSource(TimeSpan.FromSeconds(20));
                 using var streamingCall = client.GetAllEmployeesAsStream(new Empty(), cancellationToken: cancellationToken.Token);
 
                 await foreach (var employee in streamingCall.ResponseStream.ReadAllAsync(cancellationToken: cancellationToken.Token))

@@ -6,7 +6,7 @@ import "google/protobuf/empty.proto";
 package greet;
 
 // The greeting service definition.
-service Greeter {
+service GrpcTestService {
   // Sends a greeting
 	rpc SayHello (HelloRequest) returns (HelloReply);
 	rpc GetEmployeeByID (EmployeeIdRequest) returns (EmployeeDetailResponse);
