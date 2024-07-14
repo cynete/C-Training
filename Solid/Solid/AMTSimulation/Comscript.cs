@@ -1,8 +1,9 @@
 ﻿using Serilog;
+using Solid.AMTSimulation.Interface;
 
 namespace Solid.AMTSimulation
 {
-    internal class Comscript
+    internal class Comscript : IComscript
     {
         public Comscript()
         {

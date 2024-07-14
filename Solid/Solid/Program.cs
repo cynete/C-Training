@@ -1,5 +1,8 @@
-﻿using Serilog;
+﻿using Microsoft.Extensions.DependencyInjection;
+using Serilog;
 using Serilog.Sinks.SystemConsole.Themes;
+using Solid.AmtActions;
+using Solid.Menu_Executions;
 
 namespace Solid
 {
@@ -7,15 +10,20 @@ namespace Solid
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello, World!");
-
             Log.Logger = new LoggerConfiguration()
                 .MinimumLevel.Information()
                 .WriteTo.Console(theme: AnsiConsoleTheme.Sixteen)
                 .CreateLogger();
 
-            Log.Information("hello");
-            MenuExecutor.Execute();
+            Log.Information("Hello, World!");
+
+
+            var serviceProvider = new ServiceCollection()
+                .AddScoped<IMenu, MenuExecutor>()
+                .BuildServiceProvider();
+
+            var service = serviceProvider.GetService<IMenu>();
+            service.Execute();
         }
     }
 }

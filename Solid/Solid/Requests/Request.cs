@@ -1,6 +1,6 @@
-﻿namespace Solid
+﻿namespace Solid.Requests
 {
-    internal class Request
+    internal class Request : IRequest
     {
         public Actions.AllowedActions Action { get; set; }
         public string JobName { get; set; }
