@@ -9,10 +9,12 @@ namespace Solid.AmtActions
     {
         public IRequest _request { get; set; }
         public IComscript _comscript { get; set; }
-        public ActionGetMessage(IRequest request, IComscript comscript)
+        public ILogger _log { get; set; }
+        public ActionGetMessage(IRequest request, IComscript comscript, ILogger log)
         {
             _comscript = comscript;
             _request = request;
+            _log = log;
         }
         public void PerformAction()
         {
@@ -20,11 +22,11 @@ namespace Solid.AmtActions
 
             if (string.IsNullOrEmpty(result))
             {
-                Log.Error($"{_request.RequestId} not found in active jobs");
+                _log.Error($"{_request.RequestId} not found in active jobs");
             }
             else
             {
-                Log.Information($"Message found for {_request.RequestId} = {result}");
+                _log.Information($"Message found for {_request.RequestId} = {result}");
             }
         }
     }

@@ -9,10 +9,12 @@ namespace Solid.AmtActions
     {
         public IRequest _request { get; set; }
         public IComscript _comscript { get; set; }
-        public ActionAll(IRequest request, IComscript comscript)
+        public ILogger _log { get; set; }
+        public ActionAll(IRequest request, IComscript comscript, ILogger log)
         {
             _comscript = comscript;
             _request = request;
+            _log = log;
         }
         public void PerformAction()
         {
@@ -23,19 +25,19 @@ namespace Solid.AmtActions
             job.Parameters = _request.JobParameter;
             var newReqId = _comscript.CreateJob(job);
 
-            Log.Information($"Created job {job.JobName} = {newReqId}");
+            _log.Information($"Created job {job.JobName} = {newReqId}");
 
             //Monitoring status
             for (var i = 0; i < 5; i++)
             {
                 var foundJob = _comscript.FindJob(newReqId);
-                Log.Information($"Job found = {foundJob.RequestId} >> {foundJob.JobName} | {foundJob.Parameters}");
+                _log.Information($"Job found = {foundJob.RequestId} >> {foundJob.JobName} | {foundJob.Parameters}");
                 Thread.Sleep(500);
             }
 
             //Get messages
             var result = _comscript.GetMessage(newReqId);
-            Log.Information(result);
+            _log.Information(result);
         }
     }
 }

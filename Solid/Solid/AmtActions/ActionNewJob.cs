@@ -9,10 +9,12 @@ namespace Solid.AmtActions
     {
         public IRequest _request { get; set; }
         public IComscript _comscript { get; set; }
-        public ActionNewJob(IRequest request, IComscript comscript)
+        public ILogger _log { get; set; }
+        public ActionNewJob(IRequest request, IComscript comscript, ILogger log)
         {
             _comscript = comscript;
             _request = request;
+            _log = log;
         }
         public void PerformAction()
         {
@@ -22,7 +24,7 @@ namespace Solid.AmtActions
             job.Parameters = _request.JobParameter;
             var newReqId = _comscript.CreateJob(job);
 
-            Log.Information($"Created job {job.JobName} = {newReqId}");
+            _log.Information($"Created job {job.JobName} = {newReqId}");
         }
     }
 }

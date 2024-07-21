@@ -1,7 +1,9 @@
 ﻿using Microsoft.Extensions.DependencyInjection;
 using Serilog;
+using Serilog.Core;
 using Serilog.Sinks.SystemConsole.Themes;
-using Solid.AmtActions;
+using Solid.AMTSimulation;
+using Solid.AMTSimulation.Interface;
 using Solid.Menu_Executions;
 
 namespace Solid
@@ -10,20 +12,27 @@ namespace Solid
     {
         static void Main(string[] args)
         {
-            Log.Logger = new LoggerConfiguration()
-                .MinimumLevel.Information()
-                .WriteTo.Console(theme: AnsiConsoleTheme.Sixteen)
-                .CreateLogger();
-
-            Log.Information("Hello, World!");
-
-
             var serviceProvider = new ServiceCollection()
-                .AddScoped<IMenu, MenuExecutor>()
+                //you can use with interface
+                .AddScoped<IComscript, Comscript>()
+                .AddScoped<ILogger, Logger>(x =>
+                                                new LoggerConfiguration()
+                                                            .MinimumLevel.Debug()
+                                                            .WriteTo.Console(theme: AnsiConsoleTheme.Sixteen)
+                                                            .CreateLogger()
+                )
+                //you can use without interface
+                .AddScoped<MenuExecutor>()
                 .BuildServiceProvider();
-
-            var service = serviceProvider.GetService<IMenu>();
-            service.Execute();
+            
+            while (true)
+            {
+                var service = serviceProvider.GetService<MenuExecutor>();
+                if (!service.Execute())
+                {
+                    break;
+                }
+            }
         }
     }
 }

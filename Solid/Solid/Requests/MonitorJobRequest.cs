@@ -5,9 +5,9 @@ namespace Solid
 {
     internal class MonitorJobRequest : Request
     {
-        public MonitorJobRequest()
+        public MonitorJobRequest(ILogger log) : base(log)
         {
-            Log.Information("Enter request ID: ");
+            _log.Information("Enter request ID: ");
             Action = Actions.AllowedActions.MonitorJob;
             RequestId = int.Parse(Console.ReadLine());
         }

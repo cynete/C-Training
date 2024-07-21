@@ -1,13 +1,14 @@
 ﻿using Serilog;
 using Solid.Requests;
+    
 
 namespace Solid
 {
     internal class GetMessageRequest : Request
     {
-        public GetMessageRequest()
+        public GetMessageRequest(ILogger log) : base(log)
         {
-            Log.Information("Enter request ID:");
+            _log.Information("Enter request ID:");
             Action = Actions.AllowedActions.GetMessage;
             RequestId = int.Parse(Console.ReadLine());
         }

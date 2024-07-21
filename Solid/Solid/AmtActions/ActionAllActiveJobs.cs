@@ -9,19 +9,21 @@ namespace Solid.AmtActions
     {
         public IRequest _request { get; set; }
         public IComscript _comscript { get; set; }
-        public ActionAllActiveJobs(IRequest request, IComscript comscript)
+        public ILogger _log { get; set; }
+        public ActionAllActiveJobs(IRequest request, IComscript comscript, ILogger log)
         {
             _comscript = comscript;
             _request = request;
+            _log = log;
         }
         public void PerformAction()
         {
             var result = _comscript.GetAllActiveJobs();
 
-            Log.Information("Active jobs are : ");
+            _log.Information("Active jobs are : ");
             foreach (var job in result)
             {
-                Log.Information($"{job.RequestId} >> {job.JobName} | {job.Parameters}");
+                _log.Information($"{job.RequestId} >> {job.JobName} | {job.Parameters}");
             }
         }
     }

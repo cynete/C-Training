@@ -5,9 +5,13 @@ namespace Solid.AMTSimulation
 {
     internal class Comscript : IComscript
     {
-        public Comscript()
+        public Guid newGuid { get; set; }
+        public ILogger _log { get; set; }
+        public Comscript(ILogger log)
         {
-            Log.Debug("Comscript object created");
+            newGuid = Guid.NewGuid();
+            _log = log;
+            _log.Debug($"Comscript object created = {newGuid}");
         }
 
         public Job CreateNewJobObject()
@@ -15,7 +19,7 @@ namespace Solid.AMTSimulation
 
         public int CreateJob(Job NewJob)
         {
-            Log.Debug($"Creating new Job =  {NewJob.JobName}");
+            _log.Debug($"Creating new Job =  {NewJob.JobName}");
             while (true)
             {
                 var newReqId = new Random().Next(1, 1000);
@@ -37,13 +41,13 @@ namespace Solid.AMTSimulation
 
         public Job? FindJob(int requestId)
         {
-            Log.Debug($"Finding job = {requestId}");
+            _log.Debug($"Finding job = {requestId}");
             return MemorySimulation.ActiveJobs.FirstOrDefault(x => x.RequestId == requestId);
         }
 
         public string GetMessage(int newReqId)
         {
-            Log.Debug($"Getting Message for = {newReqId}");
+            _log.Debug($"Getting Message for = {newReqId}");
             if (MemorySimulation.ActiveJobs.Any(x => x.RequestId == newReqId))
             {
                 return $"Hello from >> {newReqId}";
